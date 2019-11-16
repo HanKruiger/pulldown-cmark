@@ -163,3 +163,19 @@ fn footnotes_test_8() {
 
     test_markdown_html(original, expected);
 }
+
+#[test]
+fn footnotes_test_9() {
+    let original = r##"Lorem ipsum.[^a]
+
+An unordered list before the footnotes:
+* Ipsum
+* Lorem
+
+[^a]: Cool.
+"##;
+    let expected = r##"<p>Lorem ipsum.<sup class="footnote-reference"><a href="#a">1</a></sup></p> <p>An unordered list before the footnotes:</p> <ul><li>Ipsum</li><li>Lorem</li><div class="footnote-definition" id="a"><sup class="footnote-definition-label">1</sup> <p>Cool.</p></div></ul>
+"##;
+
+    test_markdown_html(original, expected);
+}

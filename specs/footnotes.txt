@@ -151,3 +151,18 @@ They do need one line between each other.
 <sup class="footnote-reference"><a href="#1">2</a></sup>: Common for people practicing music.</p>
 </div>
 ````````````````````````````````
+
+Footnotes also work when the footnotes are directly below an unordered list.
+The contents of the list items should not be wrapped inside a paragraph element.
+
+```````````````````````````````` example
+Lorem ipsum.[^a]
+
+An unordered list before the footnotes:
+* Ipsum
+* Lorem
+
+[^a]: Cool.
+.
+<p>Lorem ipsum.<sup class="footnote-reference"><a href="#a">1</a></sup></p> <p>An unordered list before the footnotes:</p> <ul><li>Ipsum</li><li>Lorem</li><div class="footnote-definition" id="a"><sup class="footnote-definition-label">1</sup> <p>Cool.</p></div></ul>
+````````````````````````````````
